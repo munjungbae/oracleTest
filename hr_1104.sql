@@ -1,0 +1,6 @@
+-- HR RESOURCE에 있는 테이블 정보
+SELECT * FROM TAB;
+-- EMPLOYEES 테이블 구조
+DESC EMPLOYEES;
+-- EMPLOYEEXS 속에 들어있는 테이블 구조
+SELECT * FROM EMPLOYEES;
