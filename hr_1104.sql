@@ -19,3 +19,6 @@ select first_name || '의 직급은 ' || job_id || ' 입니다' as 직급 from e
 
 -- 중복되지 않게 보여주기
 select job_id from employees;
+
+SELECT * FROM DUAL;
+
