@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="381F8C7F-7C40-D432-645B-FE37A75BE73D" name="CUSTOMER">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CODE" id="A1A4503D-B61F-D385-8298-EFA22DC316F3">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7 CHAR</dataTypeSize>
+<ownDataTypeParameters>7 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="BBDBC5AE-B65B-8EBA-4DD5-E083B5124189">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENDER" id="3F807E2B-3D68-F2DC-8C7B-7FFA037278D5">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIRTH" id="BE638D1D-AC2F-AA3D-CEB2-0309F921DCBA">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PONE" id="5B3EB5FF-C915-4841-7D51-6DFB11520863">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="2830BA64-0F56-C0FF-F3A4-51CC5B6E06EB">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POINT" id="1C5A5C75-37B2-A70D-4BD3-9E2568B3C9FD">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA1886DC-D62D-109B-1675-3A35A4976848" name="CUSTOMER_CODE_PK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1A4503D-B61F-D385-8298-EFA22DC316F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA53688E-C6AE-B9D0-5E8E-C5E091B29032" name="CUSTOMER_EMAIL_UK">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-06 06:47:09 UTC</createdTime>
+<ownerDesignName>IDK</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2830BA64-0F56-C0FF-F3A4-51CC5B6E06EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
