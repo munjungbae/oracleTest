@@ -26,3 +26,5 @@ CREATE USER javauser IDENTIFIED BY 123456
     DEFAULT TABLESPACE javadata
     TEMPORARY TABLESPACE TEMP;
 GRANT connect, resource, dba to javauser;
+
+--7. 접속기능 설정
