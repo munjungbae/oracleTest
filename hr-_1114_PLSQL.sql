@@ -195,6 +195,33 @@ EXCEPTION
         DBMS_OUTPUT.PUT_LINE('해당 부서 '||VNO||' 에 대한 사원이 존재하지 않습니다.');
 END;
 /
+--LOOP문
+
+DECLARE
+    A NUMBER(2) := 1;
+    B NUMBER(2) := 1;
+BEGIN
+        DBMS_OUTPUT.PUT_LINE('구구단');
+    LOOP
+        DBMS_OUTPUT.PUT_LINE('--------------------------');
+        LOOP
+            DBMS_OUTPUT.PUT_LINE(A||' X '||B||' = '||A*B);
+            B := B+1;
+            IF (B > 9) THEN
+                B := 1;
+                EXIT;
+            END IF;
+        END LOOP;
+        A := A+1;
+        IF (A > 9) THEN
+            EXIT;
+        END IF;
+    END LOOP;
+END;
+/
+
+
+
 
 
 
