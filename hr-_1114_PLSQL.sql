@@ -244,6 +244,48 @@ BEGIN
 END;
 /
 
+--DEPARTMENTS 테이블의 전체내용을 CURSOR저장하고 FETCH 해서 전체정보출력하기
+DECLARE
+    --FOR IN LOOP문을 활용하여 CURSOR를 간단하게 사용
+    VDEPARTMENTS DEPARTMENTS%ROWTYPE;
+    CURSOR C1 IS SELECT * FROM DEPARTMENTS;
+BEGIN
+
+    FOR VDEPARTMENTS IN C1 LOOP
+        DBMS_OUTPUT.PUT_LINE(VDEPARTMENTS.DEPARTMENT_ID || ' / ' || VDEPARTMENTS.DEPARTMENT_NAME);
+    END LOOP;
+    
+    /* 커서문도 사용 안할 때의 FOR IN LOOP 방식
+    FOR VDEPARTMENTS IN (SELECT * FROM DEPARTMENTS) LOOP
+        DBMS_OUTPUT.PUT_LINE(VDEPARTMENTS.DEPARTMENT_ID || ' / ' || VDEPARTMENTS.DEPARTMENT_NAME);
+    END LOOP;
+    */
+    
+/***************************************
+    커서문 원본
+    OPEN C1;
+    LOOP
+        FETCH C1 INTO VDEPARTMENTS;
+        EXIT WHEN C1%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(VDEPARTMENTS.DEPARTMENT_ID || ' / ' || VDEPARTMENTS.DEPARTMENT_NAME);
+    END LOOP;
+    CLOSE C1;
+****************************************/
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
