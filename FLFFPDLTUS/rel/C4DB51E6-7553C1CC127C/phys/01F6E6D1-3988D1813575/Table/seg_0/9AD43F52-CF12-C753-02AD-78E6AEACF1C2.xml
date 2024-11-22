@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="TRAINEE" directorySegmentName="seg_0" id="9AD43F52-CF12-C753-02AD-78E6AEACF1C2">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<schemaObject>6FCD3E35-5510-7B2F-BE9C-0B466154A4B9</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>13B80932-52DE-24B5-56C1-B8A23DFA5AEE</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NO" id="3D4351C2-4238-177C-F5A5-4124CB8D30FA">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SECTION" id="A66991E9-8D70-DA5D-9A14-2CB4FA229144">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_NUM" id="AA17264D-3966-F277-1BBF-0E3F72289009">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ABBRE" id="CBE5158E-AA28-4109-8947-4F1409EBC65C">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TDATE" id="D8C316ED-567D-35AC-821C-2A1AC99BEDEA">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<defaultValue>sysdate      --수강신청 일</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="TRAINEE_NO_PK" id="B35FBFB4-AFC1-2BE3-13C9-964C39539AE9">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<schemaObject>6FCD3E35-5510-7B2F-BE9C-0B466154A4B9</schemaObject>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRAINEE_STUDENT_NUM_FK" id="341739EB-4EEA-E5FF-60A8-6818FF0965C9">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="TRAINEE_LESSON_ABBRE_FK" id="5CDD112A-F350-4A94-0AA4-3698D5070360">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="TRAINEE_NO_PK" id="F85EF8C4-A571-EB76-80A9-B5F94CB52165">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+<existingIndex>B35FBFB4-AFC1-2BE3-13C9-964C39539AE9</existingIndex>
+<indexSegment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>
