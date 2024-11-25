@@ -66,12 +66,9 @@ create sequence trainee_seq
 start with 1 
 increment by 1;
 
-
-
-
-
-
-
+--동일 학과 개수.
+--LPAD(COUNT(*)+1,4,'0') 는 COUNT 왼쪽 빈공간 4 개안에 '0'을 삽입
+SELECT LPAD(COUNT(*)+1,4,'0') AS TOTAL_CNT FROM STUDENT WHERE S_NUM = 01;
 
 
 
