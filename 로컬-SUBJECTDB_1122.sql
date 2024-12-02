@@ -93,7 +93,7 @@ ON T.S_NUM = S.NUM
 INNER JOIN LESSON L ON T.ABBRE = L.ABBRE
 ORDER BY T.NO;
 
-
+select LPAD(count(*)+1,4,'0') as total_count from student where s_num = 1;
 --공공데이터 (전통시장 정보)
 create table LANDPRICE(
     nodeno NUMBER,
