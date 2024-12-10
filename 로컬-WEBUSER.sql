@@ -59,10 +59,10 @@ SELECT * FROM USERS;
 
 UPDATE USERS SET ID = 'ster12390', PASS = '1234', NAME = '문정배' WHERE ID = 'ster123900';
 SELECT * FROM USERS ORDER BY NO;
-commit;
+commit; 
 DELETE FROM USERS;
 sELECT ID,PASS FROM USERS;
-INSERT INTO USERS VALUES((SELECT NVL(max(no),0)+1 FROM USERS), 'ster12390', 'rkskek1234', '문정배');
+INSERT INTO USERS VALUES((SELECT NVL(max(no),0)+1 FROM USERS), 'ster12390', '1234', '문정배');
 insert into users values((SELECT NVL(max(no),0)+1 FROM USERS), 'admin', '123456', 'admin');
 CREATE TABLE ACCOUNT(
     NO NUMBER(5,0) NOT NULL,
@@ -74,3 +74,23 @@ CREATE TABLE ACCOUNT(
 
 ALTER TABLE ACCOUNT ADD CONSTRAINT ACCOUNT_NO_PK PRIMARY KEY(NO);
 ALTER TABLE ACCOUNT ADD CONSTRAINT ACCOUNT_ID_UK UNIQUE(ID);
+
+
+-----------------------------TEMP_MEMBER TABLE 생성
+CREATE TABLE TEMPMEMBER (
+    ID VARCHAR2(20),
+    PASSWD VARCHAR2(20),
+    NAME VARCHAR2(20),
+    MEM_NUM1 VARCHAR2(6),
+    MEM_NUM2 VARCHAR2(7),
+    E_MAIL VARCHAR2(30),
+    PHONE VARCHAR2(30),
+    ZIPCODE VARCHAR2(7),
+    ADDRESS VARCHAR2(60),
+    JOB VARCHAR2(30)
+ );
+ ALTER TABLE TEMPMEMBER ADD CONSTRAINT TM_ID_PK PRIMARY KEY(ID);
+insert into tempMember values('aaaa', '1111', '홍길동', '123456', '7654321', 'hong@hanmail.net', '02-1234', '100-100', '서울', '프로그래머');
+insert into tempMember values('bbbb', '2222', '동길홍', '654321', '1234567', 'hong@naver.com', '02-1234', '100-100', '서울', '프로그래머');
+insert into tempMember values('cccc', '3333', '길홍동', '456123', '3214567', 'hong@gmail.com', '02-1234', '100-100', '서울', '프로그래머');
+SELECT * FROM TEMPMEMBER;
