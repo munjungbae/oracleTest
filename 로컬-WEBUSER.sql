@@ -13,13 +13,6 @@ CREATE table VISIT (
 );
 alter table visit add constraint VISIT_NO_PK_RIMARTKZE primary key(no);
 
-drop table "VISIT";
-
-select * from member;
-
-
-commit;
-
 CREATE TABLE MEMBER(
     NAME VARCHAR2(20),
     ID VARCHAR2(20),
@@ -30,10 +23,8 @@ CREATE TABLE MEMBER(
 CREATE SEQUENCE MEM_SEQ
 START WITH 1
 INCREMENT BY 1;
-drop table member;
-alter table MEMBER add constraint MEMBER_ID_PK primary key(ID);
-SELECT * FROM MEMBER ORDER BY NAME, ID ASC;
-commit;
+
+alter table MEMBER add constraint MEMBER_ID_PK primary key(ID
 
 
 
@@ -54,14 +45,10 @@ ALTER TABLE USERS ADD CONSTRAINT USERS_NO_PK PRIMARY KEY(NO);
 ALTER TABLE USERS ADD CONSTRAINT USERS_ID_UK UNIQUE(ID);
 
 alter table users modify NAME VARCHAR2(50);
-commit;
-SELECT * FROM USERS;
 
 UPDATE USERS SET ID = 'ster12390', PASS = '1234', NAME = '문정배' WHERE ID = 'ster123900';
 SELECT * FROM USERS ORDER BY NO;
-commit; 
-DELETE FROM USERS;
-sELECT ID,PASS FROM USERS;
+
 INSERT INTO USERS VALUES((SELECT NVL(max(no),0)+1 FROM USERS), 'ster12390', '1234', '문정배');
 insert into users values((SELECT NVL(max(no),0)+1 FROM USERS), 'admin', '123456', 'admin');
 CREATE TABLE ACCOUNT(
@@ -93,7 +80,6 @@ CREATE TABLE TEMPMEMBER (
 insert into tempMember values('aaaa', '1111', '홍길동', '123456', '7654321', 'hong@hanmail.net', '02-1234', '100-100', '서울', '프로그래머');
 insert into tempMember values('bbbb', '2222', '동길홍', '654321', '1234567', 'hong@naver.com', '02-1234', '100-100', '서울', '프로그래머');
 insert into tempMember values('cccc', '3333', '길홍동', '456123', '3214567', 'hong@gmail.com', '02-1234', '100-100', '서울', '프로그래머');
-SELECT * FROM TEMPMEMBER;
 
 ------------------학생 관리 프로그램
 CREATE table STUDENT(
@@ -110,9 +96,7 @@ CREATE table STUDENT(
 );
 
 ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK PRIMARY KEY(ID);
-commit;
-select * from student;
-delete from student;
+
 create table zipcode (
  seq NUMBER(10) not null,
  zipcode VARCHAR2(50),
@@ -124,9 +108,6 @@ create table zipcode (
 ALTER TABLE zipcode ADD CONSTRAINT PK_ZIPCODE PRIMARY KEY(seq);
 SELECT * FROM ZIPCODE WHERE DONG LIKE '강남%';
 alter table zipcode modify bunji varchar2(100);
-
-select * from zipcode;
-delete from zipcode;
 
 -----------------답변형 게시판
 CREATE TABLE BOARD (
@@ -143,8 +124,7 @@ REGDATE TIMESTAMP (6) DEFAULT SYSDATE,
 "CONTENT" VARCHAR2(4000) NOT NULL ENABLE,
 IP VARCHAR2(20) NOT NULL ENABLE
  );
-
-ALTER TABLE BOARD ADD CONSTRAINT BOARD_PK PRIMARY KEY (NUM) ENABLE
+ALTER TABLE BOARD ADD CONSTRAINT BOARD_PK PRIMARY KEY (NUM) ENABLE;
 
 CREATE SEQUENCE board_seq -- 시퀀스이름
  START WITH 1 -- 시작을 1로 설정
@@ -153,4 +133,8 @@ CREATE SEQUENCE board_seq -- 시퀀스이름
  NOCACHE
  NOCYCLE;
 
-
+select * from board;
+select max(num) as NUM from board;
+select * from student;
+delete from student;
+commit;
