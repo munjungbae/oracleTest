@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4F8F1C24-AACB-9337-4E82-62C86F009554" schemaObject="6FCD3E35-5510-7B2F-BE9C-0B466154A4B9" name="SUBJECT">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>SUBJECT</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="NO" id="EFD4307B-351F-1D36-1807-7ED141E93F57">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECT</sourceObjSchema>
+<sourceObjName>NO</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUM" id="5AABD6BC-9031-9C41-FB6F-B9B861CF8F86">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECT</sourceObjSchema>
+<sourceObjName>NUM</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="FA88BB10-DBA0-D6EA-93F1-FA298A8E0EF5">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECT</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>24 BYTE</dataTypeSize>
+<ownDataTypeParameters>24 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1998722-A973-898F-0417-8CBE45D9C047" name="SUBJECT_NO_PK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>SUBJECT_NO_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFD4307B-351F-1D36-1807-7ED141E93F57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1659583C-367F-BBDC-D4E5-0FB70AFE786F" name="SUBJECT_NUM_UK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>SUBJECT_NUM_UK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AABD6BC-9031-9C41-FB6F-B9B861CF8F86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15A98F2E-39E7-0370-26FA-339E191A0706" schemaObject="6FCD3E35-5510-7B2F-BE9C-0B466154A4B9" name="SUBJECT_NO_PK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>SUBJECT_NO_PK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFD4307B-351F-1D36-1807-7ED141E93F57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17DAC854-D841-F69C-FE22-C95F9E4814F0" schemaObject="6FCD3E35-5510-7B2F-BE9C-0B466154A4B9" name="SUBJECT_NUM_UK">
+<sourceConnName>로컬-SUBJECTDB</sourceConnName>
+<sourceObjSchema>SUBJECTDB</sourceObjSchema>
+<sourceObjName>SUBJECT_NUM_UK</sourceObjName>
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5AABD6BC-9031-9C41-FB6F-B9B861CF8F86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

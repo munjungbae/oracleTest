@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="STUDENT" directorySegmentName="seg_0" id="27E8894A-7275-24ED-5904-545048A6C106">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<schemaObject>6FCD3E35-5510-7B2F-BE9C-0B466154A4B9</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>13B80932-52DE-24B5-56C1-B8A23DFA5AEE</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PHONE" id="2A073C47-07A8-E46C-54C9-ECDBB8AE99C8">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="S_NUM" id="5131F8C6-0362-5821-7BCB-0C396255BD47">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BIRTHDAY" id="59EB1ABF-58BF-9903-9A1C-C8D36F773976">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SDATE" id="63D08039-648C-0F3F-32E8-74E8713ABF92">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<defaultValue>sysdate      --등록일</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="NO" id="6C50F4E8-6F40-87E6-EE29-680BED01A9C6">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NUM" id="73F2AD60-CB9A-ACA8-E7D6-F83BD7A9869C">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="7EED172E-638D-0309-482C-6A448C7E7A83">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDRESS" id="91196825-B41D-B9A6-DE39-5978109EB8A8">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PASSWD" id="EFFE80AA-846C-AD85-0601-2D167B67FF05">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="F2D64133-252D-DF31-AE60-3D212BE4810C">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="F4FB3215-F46D-DCAC-A17D-EE2E8746BF83">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="STUDENT_NUM_UK" id="36F61106-7AD6-66EE-85FB-D6B80343610F">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<schemaObject>6FCD3E35-5510-7B2F-BE9C-0B466154A4B9</schemaObject>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="STUDENT_NO_PK" id="D35F3FA6-B8E2-0BDE-0EF8-9E851E67D595">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<schemaObject>6FCD3E35-5510-7B2F-BE9C-0B466154A4B9</schemaObject>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="STUDENT_ID_UK" id="FB5A4539-2C13-E613-447A-5C4CD2BC0CEB">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:32 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<schemaObject>6FCD3E35-5510-7B2F-BE9C-0B466154A4B9</schemaObject>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="STUDENT_SUBJECT_NUM_FK" id="F581D963-DEE8-BE79-9FB1-1FD508412C0F">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="STUDENT_NO_PK" id="BA8668E3-001F-15CC-9370-BB852C93BE50">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+<existingIndex>D35F3FA6-B8E2-0BDE-0EF8-9E851E67D595</existingIndex>
+<indexSegment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="STUDENT_NUM_UK" id="36FFE748-E683-EE02-EE2E-4621B34CB63A">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+<existingIndex>36F61106-7AD6-66EE-85FB-D6B80343610F</existingIndex>
+<indexSegment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="STUDENT_ID_UK" id="910EFB7F-523D-A9F2-F670-A20B3E79E3A3">
+<createdBy>user1</createdBy>
+<createdTime>2024-11-22 03:50:33 UTC</createdTime>
+<ownerDesignName>FLFFPDLTUS</ownerDesignName>
+<segment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</segment>
+<tableSpace>9F270F81-4334-7CA0-E794-DFF09D5DD8C0</tableSpace>
+<existingIndex>FB5A4539-2C13-E613-447A-5C4CD2BC0CEB</existingIndex>
+<indexSegment>8D3D44BC-E2CF-B1A5-E7EB-25FE97495A48</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>
