@@ -94,8 +94,9 @@ CREATE table STUDENT(
  ADDRESS1 VARCHAR2(120) NOT NULL,
  ADDRESS2 VARCHAR2(50) NOT NULL
 );
-
 ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK PRIMARY KEY(ID);
+select * from student;
+select * from board;
 
 create table zipcode (
  seq NUMBER(10) not null,
@@ -106,7 +107,7 @@ create table zipcode (
  bunji VARCHAR2(50)
 );
 ALTER TABLE zipcode ADD CONSTRAINT PK_ZIPCODE PRIMARY KEY(seq);
-SELECT * FROM ZIPCODE WHERE DONG LIKE '강남%';
+SELECT * FROM ZIPCODE;
 alter table zipcode modify bunji varchar2(100);
 
 -----------------답변형 게시판
@@ -125,7 +126,7 @@ REGDATE TIMESTAMP (6) DEFAULT SYSDATE,
 IP VARCHAR2(20) NOT NULL ENABLE
  );
 ALTER TABLE BOARD ADD CONSTRAINT BOARD_PK PRIMARY KEY (NUM) ENABLE;
-
+select * from board;
 CREATE SEQUENCE board_seq -- 시퀀스이름
  START WITH 1 -- 시작을 1로 설정
  INCREMENT BY 1 -- 증가값을 1씩 증가
@@ -140,7 +141,7 @@ delete from student;
 commit;
 DELETE FROM STUDENT WHERE ID = 'asdf' and PASS = 'asdf';
 rollback;
-
+select count(*) as count from board where num = 29 and pass = 'asdf';
 ---모델2로 만든 보드 
 CREATE TABLE BOARD2 (
 "NUM" NUMBER(7,0),
@@ -163,3 +164,38 @@ CREATE SEQUENCE board2_seq -- 시퀀스이름
  NOMAXVALUE -- 최대값이 무한대..
  NOCACHE
  NOCYCLE;
+ 
+CREATE TABLE TICKET (
+"NO" NUMBER(10),
+"DATE" TIMESTAMP(6) DEFAULT SYSDATE,
+TITLE VARCHAR2(50) NOT NULL,
+PRICE NUMBER(10) NOT NULL
+);
+
+CREATE SEQUENCE TICKET_seq -- 시퀀스이름
+ START WITH 1 -- 시작을 1로 설정
+ INCREMENT BY 1 -- 증가값을 1씩 증가
+ NOMAXVALUE -- 최대값이 무한대..
+ NOCACHE
+ NOCYCLE;
+
+insert into ticket(NO,TITLE,PRICE) values(TICKET_SEQ.NEXTVAL,'먹이주기 체험', 19000);
+insert into ticket(NO,TITLE,PRICE) values(TICKET_SEQ.NEXTVAL,'맹수 생태 설명회', 15000);
+insert into ticket(NO,TITLE,PRICE) values(TICKET_SEQ.NEXTVAL,'동물원 두드림 교육', 15000);
+insert into ticket(NO,TITLE,PRICE) values(TICKET_SEQ.NEXTVAL,'일일 훈련사 체험', 25000);
+SELECT * FROM TICKET;
+
+CREATE TABLE basket (
+"ID" VARCHAR2(12) NOT NULL,
+"NAME" VARCHAR2(10) NOT NULL,
+EMAIL VARCHAR2(30) NOT NULL,
+"DATE" TIMESTAMP(6) DEFAULT SYSDATE,
+TITLE VARCHAR2(50) NOT NULL,
+PRICE NUMBER(10) NOT NULL
+);
+select * from student;
+SELECT * FROM BASKET;
+
+delete from basket;
+rollback;
+commit;
