@@ -95,6 +95,7 @@ CREATE table STUDENT(
  ADDRESS2 VARCHAR2(50) NOT NULL
 );
 ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK PRIMARY KEY(ID);
+ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK unique KEY(zipcode);
 select * from student;
 select * from board;
 
@@ -107,6 +108,7 @@ create table zipcode (
  bunji VARCHAR2(50)
 );
 ALTER TABLE zipcode ADD CONSTRAINT PK_ZIPCODE PRIMARY KEY(seq);
+ALTER TABLE zipcode ADD CONSTRAINT ZIPCODE_FK foreign KEY(zipcode) references Student (zipcode);
 SELECT * FROM ZIPCODE;
 alter table zipcode modify bunji varchar2(100);
 
@@ -196,7 +198,7 @@ PRICE NUMBER(10) NOT NULL,
 );
 select * from student;
 SELECT * FROM BASKET;
-
+alter table basket add constraint basket_id_fk  foreign key(id) references student (id);
 alter table basket MODIFY COUNT NUMBER(10) NOT NULL; 
 
 SELECT * FROM BASKET WHERE ID = 'asdf'ORDER BY "DATE" DESC;
