@@ -62,7 +62,7 @@ CREATE TABLE ACCOUNT(
 ALTER TABLE ACCOUNT ADD CONSTRAINT ACCOUNT_NO_PK PRIMARY KEY(NO);
 ALTER TABLE ACCOUNT ADD CONSTRAINT ACCOUNT_ID_UK UNIQUE(ID);
 
-
+DELETE FROM STUDENT WHERE ID = 'asdf' AND PASS = 'asdf';
 -----------------------------TEMP_MEMBER TABLE 생성
 CREATE TABLE TEMPMEMBER (
     ID VARCHAR2(20),
@@ -99,6 +99,7 @@ ALTER TABLE STUDENT ADD CONSTRAINT STUDENT_PK unique KEY(zipcode);
 select * from student;
 select * from board;
 
+insert into Student
 create table zipcode (
  seq NUMBER(10) not null,
  zipcode VARCHAR2(50),
@@ -198,9 +199,11 @@ PRICE NUMBER(10) NOT NULL,
 );
 select * from student;
 SELECT * FROM BASKET;
-alter table basket add constraint basket_id_fk  foreign key(id) references student (id);
+alter table basket add constraint basket_id_fk  foreign key(id) references student(id) ON DELETE CASCADE;
 alter table basket MODIFY COUNT NUMBER(10) NOT NULL; 
-
+rollback;
+commit;
+select * from board;
 SELECT * FROM BASKET WHERE ID = 'asdf'ORDER BY "DATE" DESC;
 delete from basket;
 rollback;
