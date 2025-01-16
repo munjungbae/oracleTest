@@ -43,6 +43,13 @@ CREATE USER webuser IDENTIFIED BY 123456
     TEMPORARY TABLESPACE TEMP;
 GRANT connect, resource, dba to webuser;
 
+--8 웹 프로젝트 사용자 계정 생성하기
+ALTER SESSION SET "_ORACLE_SCRIPT"=true;
+DROP USER munjungbae CASCADE;
+CREATE USER munjungbae IDENTIFIED BY 123456
+    DEFAULT TABLESPACE USERS
+    TEMPORARY TABLESPACE TEMP;
+GRANT connect, resource, dba to munjungbae;
 
 
 
