@@ -1,125 +1,156 @@
-CREATE TABLE jdbcBoard( 
+CREATE TABLE jdbcboard (
     board_no NUMBER,
-    title VARCHAR2(100) NOT NULL,
-    content VARCHAR2(1000) NULL,
-    writer VARCHAR2(50) NOT NULL,
-    reg_date DATE DEFAULT SYSDATE,
-    PRIMARY KEY (board_no)
-);
-create sequence jdbcBoard_seq
-start with 1
-increment by 1;
-
-INSERT INTO JDBCBOARD(BOARD_NO, TITLE, CONTENT, WRITER) VALUES(JDBCBOARD_SEQ.NEXTVAL, ?, ?, ?);
-SELECT board_no, title, content, writer, reg_date FROM jdbcBoard WHERE board_no > 0 ORDER BY board_no desc, reg_date DESC;
-SELECT board_no, title, content, writer, reg_date FROM jdbcBoard WHERE board_no = 8;
-
-CREATE TABLE jpaboard(
-    board_no NUMBER,
-    title VARCHAR2(100) NOT NULL,
-    content VARCHAR2(1000) NULL,
-    writer VARCHAR2(50) NOT NULL,
-    reg_date DATE DEFAULT SYSDATE,
-    PRIMARY KEY (board_no)
+    title    VARCHAR2(100) NOT NULL,
+    content  VARCHAR2(1000) NULL,
+    writer   VARCHAR2(50) NOT NULL,
+    reg_date DATE DEFAULT sysdate,
+    PRIMARY KEY ( board_no )
 );
 
-create sequence jpaboard_seq
-start with 1
-increment by 1;
-commit;
+CREATE SEQUENCE jdbcboard_seq START WITH 1 INCREMENT BY 1;
 
+INSERT INTO jdbcboard (
+    board_no,
+    title,
+    content,
+    writer
+) VALUES ( jdbcboard_seq.NEXTVAL,
+           ?,
+           ?,
+           ? );
 
-CREATE TABLE mybatisboard
-(
+SELECT
+    board_no,
+    title,
+    content,
+    writer,
+    reg_date
+FROM
+    jdbcboard
+WHERE
+    board_no > 0
+ORDER BY
+    board_no DESC,
+    reg_date DESC;
+
+SELECT
+    board_no,
+    title,
+    content,
+    writer,
+    reg_date
+FROM
+    jdbcboard
+WHERE
+    board_no = 8;
+
+CREATE TABLE jpaboard (
     board_no NUMBER,
-    title VARCHAR2(100) NOT NULL,   
-    content VARCHAR2(500) NULL,
-    writer VARCHAR2(50) NOT NULL,
-    reg_date DATE DEFAULT SYSDATE,  
-    PRIMARY KEY (board_no)
+    title    VARCHAR2(100) NOT NULL,
+    content  VARCHAR2(1000) NULL,
+    writer   VARCHAR2(50) NOT NULL,
+    reg_date DATE DEFAULT sysdate,
+    PRIMARY KEY ( board_no )
 );
-create sequence mybatisboard_seq
-start with 1
-increment by 1;
 
-CREATE TABLE mybatismember(
-    user_no NUMBER,
-    user_id VARCHAR2(50) NOT NULL,
-    user_pw VARCHAR2(50) NOT NULL,
+CREATE SEQUENCE jpaboard_seq START WITH 1 INCREMENT BY 1;
+
+COMMIT;
+
+CREATE TABLE mybatisboard (
+    board_no NUMBER,
+    title    VARCHAR2(100) NOT NULL,
+    content  VARCHAR2(500) NULL,
+    writer   VARCHAR2(50) NOT NULL,
+    reg_date DATE DEFAULT sysdate,
+    PRIMARY KEY ( board_no )
+);
+
+CREATE SEQUENCE mybatisboard_seq START WITH 1 INCREMENT BY 1;
+
+CREATE TABLE mybatismember (
+    user_no   NUMBER,
+    user_id   VARCHAR2(50) NOT NULL,
+    user_pw   VARCHAR2(50) NOT NULL,
     user_name VARCHAR2(100) NOT NULL,
-    coin NUMBER(10) DEFAULT 0,
-    reg_date DATE DEFAULT SYSDATE,
-    upd_date DATE DEFAULT SYSDATE,
-    enabled CHAR(1) DEFAULT '1',
-    PRIMARY KEY (user_no)
+    coin      NUMBER(10) DEFAULT 0,
+    reg_date  DATE DEFAULT sysdate,
+    upd_date  DATE DEFAULT sysdate,
+    enabled   CHAR(1) DEFAULT '1',
+    PRIMARY KEY ( user_no )
 );
-    CREATE TABLE mybatismember_auth(
-    user_no NUMBER NOT NULL, 
-    auth VARCHAR2(50) NOT NULL
+
+CREATE TABLE mybatismember_auth (
+    user_no NUMBER NOT NULL,
+    auth    VARCHAR2(50) NOT NULL
 );
-ALTER TABLE mybatismember_auth ADD CONSTRAINT fk_mybatismember_auth_user_no FOREIGN KEY(user_no) REFERENCES mybatismember(user_no);
 
-create sequence mybatismember_seq
-start with 1
-increment by 1;
+ALTER TABLE mybatismember_auth
+    ADD CONSTRAINT fk_mybatismember_auth_user_no FOREIGN KEY ( user_no )
+        REFERENCES mybatismember ( user_no );
 
-select * from mybatismember;
+CREATE SEQUENCE mybatismember_seq START WITH 1 INCREMENT BY 1;
 
+SELECT
+    *
+FROM
+    mybatismember;
 
-create table CUSTOMER (
-    "NO" NUMBER,
+CREATE TABLE customer (
+    "NO"   NUMBER,
     "NAME" VARCHAR2(100) NOT NULL,
-    "ID" VARCHAR(100) NOT NULL,
-    PASS VARCHAR(100) NOT NULL,
-    PRIMARY KEY("NO")
+    "ID"   VARCHAR(100) NOT NULL,
+    pass   VARCHAR(100) NOT NULL,
+    PRIMARY KEY ( "NO" )
 )
-create sequence CUSTOMER_seq
-start with 1
-increment by 1;
 
-CREATE TABLE item(
-item_id NUMBER(5),
-item_name VARCHAR2(20),
-price NUMBER(6),
-description VARCHAR2(50),
-picture_url VARCHAR2(200),
-PRIMARY KEY (item_id)
-);
-create sequence item_seq
-start with 1
-increment by 1;
+CREATE SEQUENCE customer_seq START WITH 1 INCREMENT BY 1;
 
-CREATE TABLE item2(
-item_id NUMBER(5),
-item_name VARCHAR2(20),
-price NUMBER(6),
-description VARCHAR2(50),
-picture_url VARCHAR2(200),
-picture_url2 VARCHAR2(200),
-PRIMARY KEY (item_id)
-);
-create sequence item2_seq
-start with 1
-increment by 1;
-
-CREATE TABLE item3(
-item_id NUMBER(5),
-item_name VARCHAR2(50),
-price NUMBER(10),
-description VARCHAR2(100),
-PRIMARY KEY (item_id)
+CREATE TABLE item (
+    item_id     NUMBER(5),
+    item_name   VARCHAR2(20),
+    price       NUMBER(6),
+    description VARCHAR2(50),
+    picture_url VARCHAR2(200),
+    PRIMARY KEY ( item_id )
 );
 
-CREATE TABLE item_attach( 
-fullName
-VARCHAR2(100), item_id
-NUMBER(5) NOT NULL,
-regdate DATE DEFAULT SYSDATE,
-PRIMARY KEY (fullName)
-);
-ALTER TABLE item_attach ADD CONSTRAINT fk_item_attch FOREIGN KEY(item_id) REFERENCES item3(item_id);
-create sequence item3_seq
-start with 1
-increment by 1;
+CREATE SEQUENCE item_seq START WITH 1 INCREMENT BY 1;
 
-select * from item; 
+CREATE TABLE item2 (
+    item_id      NUMBER(5),
+    item_name    VARCHAR2(20),
+    price        NUMBER(6),
+    description  VARCHAR2(50),
+    picture_url  VARCHAR2(200),
+    picture_url2 VARCHAR2(200),
+    PRIMARY KEY ( item_id )
+);
+
+CREATE SEQUENCE item2_seq START WITH 1 INCREMENT BY 1;
+
+CREATE TABLE item3 (
+    item_id     NUMBER(5),
+    item_name   VARCHAR2(50),
+    price       NUMBER(10),
+    description VARCHAR2(100),
+    PRIMARY KEY ( item_id )
+);
+
+CREATE TABLE item_attach (
+    fullname VARCHAR2(100),
+    item_id  NUMBER(5) NOT NULL,
+    regdate  DATE DEFAULT sysdate,
+    PRIMARY KEY ( fullname )
+);
+
+ALTER TABLE item_attach
+    ADD CONSTRAINT fk_item_attch FOREIGN KEY ( item_id )
+        REFERENCES item3 ( item_id );
+
+CREATE SEQUENCE item3_seq START WITH 1 INCREMENT BY 1;
+
+SELECT
+    *
+FROM
+    item;
