@@ -148,3 +148,12 @@ CREATE TABLE code_group (
     upd_date   DATE DEFAULT sysdate,
     PRIMARY KEY ( group_code )
 );
+
+select * from code_detail;
+select * from code_group;
+select * from member;
+select * from member_auth;
+
+UPDATE code_detail SET code_name = '떡', code_value = '02' WHERE group_code = 1 AND code_value = 3;
+delete from code_detail;
+commit;
