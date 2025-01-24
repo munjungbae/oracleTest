@@ -65,6 +65,7 @@ increment by 1;
 
 select * from mybatismember;
 
+SELECT 
 
 create table CUSTOMER (
     "NO" NUMBER,
