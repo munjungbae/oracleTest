@@ -21,6 +21,8 @@ CREATE TABLE code_detail (
                   code_value )
 );
 
+
+
 --고객 테이블
 CREATE TABLE member (
     user_no   NUMBER(5) NOT NULL,
@@ -66,6 +68,10 @@ CREATE TABLE board (
     PRIMARY KEY ( board_no )
 );
 
+insert into board (board_no, title, content, writer) values (board_seq.NEXTVAL, 'title', 'content', 'writer');
+commit;
+
+select count(*) from board;
 create sequence board_seq
 start with 1
 increment by 1;
@@ -99,6 +105,7 @@ create sequence item_seq
 start with 1
 increment by 1;
 
+commit;
 -- 코인 충전 내역 테이블
 CREATE TABLE charge_coin_history (
     history_no NUMBER(10) NOT NULL,
@@ -153,7 +160,10 @@ select * from code_detail;
 select * from code_group;
 select * from member;
 select * from member_auth;
-
-UPDATE code_detail SET code_name = '떡', code_value = '02' WHERE group_code = 1 AND code_value = 3;
+select * from board;
 delete from code_detail;
+delete from member;
+
 commit;
+
+SELECT board_no, title, content, writer, reg_date FROM (select board_no, title, content, writer, reg_date, rownum as rnum from board) where rnum between 5*1-(5-1) and 5*1 ORDER BY board_no DESC, reg_date DESC;
